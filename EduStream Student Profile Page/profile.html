@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduStream | Student Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+    <!-- Mobile Menu Toggle -->
+    <input type="checkbox" id="nav-toggle" hidden>
+
+    <!-- SIDEBAR (Consistent with Dashboard) -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <div class="logo-icon">E</div>
+                <span>EduStream</span>
+            </div>
+            <label for="nav-toggle" class="close-menu">×</label>
+        </div>
+        <nav class="nav-menu">
+            <a href="../EduStream Student DashBoard/dashboard.html" class="nav-link">📊 Dashboard</a>
+            <a href="#" class="nav-link active">👤 My Profile</a>
+            <a href="#" class="nav-link">📚 Courses</a>
+            <a href="#" class="nav-link">🎓 Grades</a>
+            <a href="#" class="nav-link">⚙️ Settings</a>
+        </nav>
+    </aside>
+
+    <div class="main-wrapper">
+        <!-- TOP HEADER -->
+        <header class="top-header">
+            <div class="header-left">
+                <label for="nav-toggle" class="menu-btn">☰</label>
+                <h1>Student Bio-Data</h1>
+            </div>
+            <div class="header-right">
+                <button class="btn btn-outline edit-btn" id="edit-profile-trigger">
+                    ✏️ Edit Profile
+                </button>
+            </div>
+        </header>
+
+        <main class="profile-content">
+            
+            <!-- PROFILE HEADER CARD -->
+            <section class="profile-header-card">
+                <div class="profile-cover"></div>
+                <div class="profile-main-info">
+                    <div class="profile-picture-container">
+                        <div class="profile-picture">
+                            <img src="https://via.placeholder.com/150" alt="Student Photo" id="student-avatar">
+                        </div>
+                        <span class="status-badge active">Active</span>
+                    </div>
+                    <div class="profile-title">
+                        <h2 class="student-name" id="student-fullname">Johnathan Smith</h2>
+                        <p class="student-id">ID: 20240982 • School of Engineering</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- QUICK STATS SECTION -->
+            <section class="quick-stats">
+                <div class="stat-card">
+                    <span class="stat-icon">📈</span>
+                    <div>
+                        <p class="stat-label">Cumulative GPA</p>
+                        <h3 class="stat-value">3.84</h3>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">📅</span>
+                    <div>
+                        <p class="stat-label">Attendance</p>
+                        <h3 class="stat-value">94.2%</h3>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-icon">💳</span>
+                    <div>
+                        <p class="stat-label">Fee Status</p>
+                        <h3 class="stat-value text-success">Paid</h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- INFORMATION GRID -->
+            <div class="info-grid">
+                
+                <!-- PERSONAL INFORMATION -->
+                <section class="info-card">
+                    <header class="card-header">
+                        <h3>Personal Information</h3>
+                    </header>
+                    <div class="card-body">
+                        <div class="info-item">
+                            <label>Full Name</label>
+                            <p>Johnathan Alexander Smith</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Email Address</label>
+                            <p>j.smith@edustream.edu</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Phone Number</label>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Date of Birth</label>
+                            <p>May 14, 2004</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ACADEMIC INFORMATION -->
+                <section class="info-card">
+                    <header class="card-header">
+                        <h3>Academic Record</h3>
+                    </header>
+                    <div class="card-body">
+                        <div class="info-item">
+                            <label>Department</label>
+                            <p>Software Engineering</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Level / Session</label>
+                            <p>300 Level / 2024-2025</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Admission Date</label>
+                            <p>September 10, 2022</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Advisor</label>
+                            <p>Dr. Sarah Jenkins</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- PARENT / GUARDIAN INFORMATION -->
+                <section class="info-card">
+                    <header class="card-header">
+                        <h3>Parent / Guardian</h3>
+                    </header>
+                    <div class="card-body">
+                        <div class="info-item">
+                            <label>Guardian Name</label>
+                            <p>Mrs. Eleanor Smith</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Relationship</label>
+                            <p>Mother</p>
+                        </div>
+                        <div class="info-item">
+                            <label>Emergency Contact</label>
+                            <p>+1 (555) 987-6543</p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

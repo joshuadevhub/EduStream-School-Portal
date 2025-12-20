@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduStream | Student Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <!-- Hidden checkbox for CSS-only mobile menu toggle -->
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden>
+
+    <!-- SIDEBAR NAVIGATION -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <div class="logo-icon">E</div>
+                <span>EduStream</span>
+            </div>
+            <label for="nav-toggle" class="close-menu">×</label>
+        </div>
+
+        <nav class="nav-menu">
+            <a href="#" class="nav-link active">
+                <span class="icon">📊</span> Dashboard
+            </a>
+            <a href="#" class="nav-link">
+                <span class="icon">📚</span> My Courses
+            </a>
+            <a href="#" class="nav-link">
+                <span class="icon">📅</span> Schedule
+            </a>
+            <a href="#" class="nav-link">
+                <span class="icon">📝</span> Assignments
+            </a>
+            <a href="#" class="nav-link">
+                <span class="icon">🎓</span> Grades
+            </a>
+            <a href="#" class="nav-link">
+                <span class="icon">⚙️</span> Settings
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="user-brief">
+                <div class="avatar">JS</div>
+                <div class="user-info">
+                    <p class="name">John Smith</p>
+                    <p class="role">ID: 20240982</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT AREA -->
+    <div class="main-wrapper">
+        
+        <!-- TOP HEADER -->
+        <header class="top-header">
+            <div class="header-left">
+                <label for="nav-toggle" class="menu-btn">☰</label>
+                <h1>Welcome back, John!</h1>
+            </div>
+            
+            <div class="header-right">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search courses, files...">
+                </div>
+                <button class="icon-btn" aria-label="Notifications">
+                    🔔 <span class="badge">3</span>
+                </button>
+                <button class="btn btn-primary">Upgrade Pro</button>
+            </div>
+        </header>
+
+        <main class="dashboard-content">
+            
+            <!-- STATS SECTION -->
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <p class="label">Current GPA</p>
+                    <h3 class="value">3.84</h3>
+                    <span class="trend up">↑ 0.2 this term</span>
+                </div>
+                <div class="stat-card">
+                    <p class="label">Attendance</p>
+                    <h3 class="value">94%</h3>
+                    <div class="progress-mini"><div class="fill" style="width: 94%"></div></div>
+                </div>
+                <div class="stat-card">
+                    <p class="label">Active Courses</p>
+                    <h3 class="value">6</h3>
+                    <span class="trend">Full load</span>
+                </div>
+            </section>
+
+            <!-- MAIN GRID -->
+            <div class="content-grid">
+                
+                <!-- LEFT COLUMN: COURSES -->
+                <section class="content-section">
+                    <div class="section-header">
+                        <h2>Ongoing Courses</h2>
+                        <a href="#" class="text-link">View all</a>
+                    </div>
+                    
+                    <div class="course-list">
+                        <!-- Course Card -->
+                        <article class="course-card">
+                            <div class="course-color" style="background: #6366f1;"></div>
+                            <div class="course-details">
+                                <h3>Advanced Mathematics II</h3>
+                                <p>Prof. Sarah Jenkins • Room 402</p>
+                                <div class="progress-container">
+                                    <div class="progress-bar"><div class="fill" style="width: 75%"></div></div>
+                                    <span>75%</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Course Card (Loading State Demo) -->
+                        <article class="course-card skeleton">
+                            <div class="course-color"></div>
+                            <div class="course-details">
+                                <div class="skeleton-line title"></div>
+                                <div class="skeleton-line text"></div>
+                            </div>
+                        </article>
+
+                        <article class="course-card">
+                            <div class="course-color" style="background: #10b981;"></div>
+                            <div class="course-details">
+                                <h3>World History: The Renaissance</h3>
+                                <p>Dr. Albert Ross • Online</p>
+                                <div class="progress-container">
+                                    <div class="progress-bar"><div class="fill" style="width: 40%"></div></div>
+                                    <span>40%</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- RIGHT COLUMN: ASSIGNMENTS -->
+                <section class="content-section">
+                    <div class="section-header">
+                        <h2>Upcoming Deadlines</h2>
+                    </div>
+                    
+                    <div class="assignment-list">
+                        <div class="assignment-item">
+                            <div class="date-box">
+                                <span class="month">OCT</span>
+                                <span class="day">12</span>
+                            </div>
+                            <div class="assignment-info">
+                                <h4>Physics Lab Report</h4>
+                                <p>Due in 2 days</p>
+                            </div>
+                            <span class="status-tag high">High</span>
+                        </div>
+
+                        <div class="assignment-item">
+                            <div class="date-box">
+                                <span class="month">OCT</span>
+                                <span class="day">15</span>
+                            </div>
+                            <div class="assignment-info">
+                                <h4>English Essay Draft</h4>
+                                <p>Due in 5 days</p>
+                            </div>
+                            <span class="status-tag medium">Med</span>
+                        </div>
+
+                        <div class="assignment-item disabled">
+                            <div class="date-box">
+                                <span class="month">SEP</span>
+                                <span class="day">30</span>
+                            </div>
+                            <div class="assignment-info">
+                                <h4>Algebra Quiz</h4>
+                                <p>Expired / Submitted</p>
+                            </div>
+                            <span class="status-tag done">Done</span>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
