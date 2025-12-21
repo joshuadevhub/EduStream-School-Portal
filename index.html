@@ -1,195 +1,205 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduStream | Student Dashboard</title>
-    <link rel="stylesheet" href="dashboard.css">
+    <title>EduStream School | Excellence in Learning</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Hidden checkbox for CSS-only mobile menu toggle -->
-    <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden>
+    <!-- Mobile Navigation Toggle (Checkbox Hack) -->
+    <input type="checkbox" id="mobileMenuToggle" class="mobile-menu-checkbox" hidden>
 
-    <!-- SIDEBAR NAVIGATION -->
-    <aside class="sidebar">
-        <div class="sidebar-header">
-            <div class="logo">
-                <div class="logo-icon">E</div>
-                <span>EduStream</span>
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="logo-group">
+                <div id="schoolLogo" class="logo-box">E</div>
+                <span id="schoolName" class="brand-name">EduStream Public School</span>
             </div>
-            <label for="nav-toggle" class="close-menu">×</label>
-        </div>
 
-        <nav class="nav-menu">
-            <a href="#" class="nav-link active">
-                <span class="icon">📊</span> Dashboard
-            </a>
-            <a href="#" class="nav-link">
-                <span class="icon">📚</span> My Courses
-            </a>
-            <a href="#" class="nav-link">
-                <span class="icon">📅</span> Schedule
-            </a>
-            <a href="#" class="nav-link">
-                <span class="icon">📝</span> Assignments
-            </a>
-            <a href="#" class="nav-link">
-                <span class="icon">🎓</span> Grades
-            </a>
-            <a href="#" class="nav-link">
-                <span class="icon">⚙️</span> Settings
-            </a>
-        </nav>
-
-        <div class="sidebar-footer">
-            <div class="user-brief">
-                <div class="avatar">JS</div>
-                <div class="user-info">
-                    <p class="name">John Smith</p>
-                    <p class="role">ID: 20240982</p>
+            <nav id="mainNav" class="nav-bar">
+                <ul class="nav-list">
+                    <li><a href="#aboutSection" class="nav-link">About</a></li>
+                    <li><a href="#featuresSection" class="nav-link">Why Us</a></li>
+                    <li><a href="#newsSection" class="nav-link">News</a></li>
+                    <li><a href="#testimonialsSection" class="nav-link">Success Stories</a></li>
+                </ul>
+                <div class="nav-auth-mobile">
+                    <a href="EduStream Login Page/auth.html" id="loginBtnMobile" class="btn btn-outline">Login</a>
+                    <a href="#" id="signupBtnMobile" class="btn btn-primary">Apply Now</a>
                 </div>
+            </nav>
+
+            <div class="header-actions">
+                <a href="EduStream Login Page/auth.html" id="loginBtn" class="btn btn-outline desktop-only">Login</a>
+                <a href="#" id="signupBtn" class="btn btn-primary desktop-only">Apply Now</a>
+                <label for="mobileMenuToggle" class="hamburger-icon" id="hamburgerBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
             </div>
         </div>
-    </aside>
+    </header>
 
-    <!-- MAIN CONTENT AREA -->
-    <div class="main-wrapper">
-        
-        <!-- TOP HEADER -->
-        <header class="top-header">
-            <div class="header-left">
-                <label for="nav-toggle" class="menu-btn">☰</label>
-                <h1>Welcome back, John!</h1>
+    <main>
+        <!-- HERO SECTION -->
+        <section id="heroSection" class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1 id="heroTitle">Inspiring Future Leaders Today</h1>
+                    <p id="heroDescription">
+                        Welcome to EduStream, where academic excellence meets modern innovation. 
+                        Join our community of learners and shape your future with world-class facilities.
+                    </p>
+                    <div class="hero-btns">
+                        <a href="#" id="heroApplyBtn" class="btn btn-primary btn-lg">Start Application</a>
+                        <a href="EduStream Login Page/auth.html" id="heroLoginBtn" class="btn btn-secondary btn-lg">Student Portal</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-placeholder">
+                        <!-- ID for JS-driven slider/image replacement -->
+                        <img src="images/studentOnCampus.webp" alt="Students on Campus" id="heroMainImage">
+                    </div>
+                </div>
             </div>
-            
-            <div class="header-right">
-                <div class="search-bar">
-                    <input type="text" placeholder="Search courses, files...">
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="aboutSection" class="section about">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Mission</h2>
+                    <p>Building a foundation for lifelong success.</p>
                 </div>
-                <button class="icon-btn" aria-label="Notifications">
-                    🔔 <span class="badge">3</span>
-                </button>
-                <button class="btn btn-primary">Upgrade Pro</button>
+                <div class="about-grid">
+                    <article class="about-text">
+                        <h3>A Legacy of Excellence</h3>
+                        <p>EduStream has been at the forefront of education for over two decades. We believe in a holistic approach to learning that combines rigorous academics with emotional intelligence and creative thinking.</p>
+                        <p>Our faculty consists of industry veterans and academic scholars dedicated to mentoring the next generation of innovators.</p>
+                    </article>
+                    <div class="about-stats" id="aboutStatsGrid">
+                        <div class="stat-item"><span class="stat-num">98%</span><p>Graduation Rate</p></div>
+                        <div class="stat-item"><span class="stat-num">50+</span><p>Activities</p></div>
+                        <div class="stat-item"><span class="stat-num">15:1</span><p>Student Ratio</p></div>
+                    </div>
+                </div>
             </div>
-        </header>
+        </section>
 
-        <main class="dashboard-content">
-            
-            <!-- STATS SECTION -->
-            <section class="stats-grid">
-                <div class="stat-card">
-                    <p class="label">Current GPA</p>
-                    <h3 class="value">3.84</h3>
-                    <span class="trend up">↑ 0.2 this term</span>
+        <!-- FEATURES SECTION -->
+        <section id="featuresSection" class="section features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Why Choose EduStream?</h2>
                 </div>
-                <div class="stat-card">
-                    <p class="label">Attendance</p>
-                    <h3 class="value">94%</h3>
-                    <div class="progress-mini"><div class="fill" style="width: 94%"></div></div>
+                <div class="grid grid-3">
+                    <article class="card feature-card" id="featureCard1">
+                        <div class="card-icon">💻</div>
+                        <h3>Hybrid Learning</h3>
+                        <p>Access course materials and lectures 24/7 through our advanced student portal.</p>
+                    </article>
+                    <article class="card feature-card" id="featureCard2">
+                        <div class="card-icon">🔬</div>
+                        <h3>Modern Labs</h3>
+                        <p>State-of-the-art facilities for STEM research and experimental learning.</p>
+                    </article>
+                    <article class="card feature-card" id="featureCard3">
+                        <div class="card-icon">🏆</div>
+                        <h3>Global Awards</h3>
+                        <p>Consistently ranked among the top 10 schools for academic achievement.</p>
+                    </article>
                 </div>
-                <div class="stat-card">
-                    <p class="label">Active Courses</p>
-                    <h3 class="value">6</h3>
-                    <span class="trend">Full load</span>
-                </div>
-            </section>
-
-            <!-- MAIN GRID -->
-            <div class="content-grid">
-                
-                <!-- LEFT COLUMN: COURSES -->
-                <section class="content-section">
-                    <div class="section-header">
-                        <h2>Ongoing Courses</h2>
-                        <a href="#" class="text-link">View all</a>
-                    </div>
-                    
-                    <div class="course-list">
-                        <!-- Course Card -->
-                        <article class="course-card">
-                            <div class="course-color" style="background: #6366f1;"></div>
-                            <div class="course-details">
-                                <h3>Advanced Mathematics II</h3>
-                                <p>Prof. Sarah Jenkins • Room 402</p>
-                                <div class="progress-container">
-                                    <div class="progress-bar"><div class="fill" style="width: 75%"></div></div>
-                                    <span>75%</span>
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- Course Card (Loading State Demo) -->
-                        <article class="course-card skeleton">
-                            <div class="course-color"></div>
-                            <div class="course-details">
-                                <div class="skeleton-line title"></div>
-                                <div class="skeleton-line text"></div>
-                            </div>
-                        </article>
-
-                        <article class="course-card">
-                            <div class="course-color" style="background: #10b981;"></div>
-                            <div class="course-details">
-                                <h3>World History: The Renaissance</h3>
-                                <p>Dr. Albert Ross • Online</p>
-                                <div class="progress-container">
-                                    <div class="progress-bar"><div class="fill" style="width: 40%"></div></div>
-                                    <span>40%</span>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </section>
-
-                <!-- RIGHT COLUMN: ASSIGNMENTS -->
-                <section class="content-section">
-                    <div class="section-header">
-                        <h2>Upcoming Deadlines</h2>
-                    </div>
-                    
-                    <div class="assignment-list">
-                        <div class="assignment-item">
-                            <div class="date-box">
-                                <span class="month">OCT</span>
-                                <span class="day">12</span>
-                            </div>
-                            <div class="assignment-info">
-                                <h4>Physics Lab Report</h4>
-                                <p>Due in 2 days</p>
-                            </div>
-                            <span class="status-tag high">High</span>
-                        </div>
-
-                        <div class="assignment-item">
-                            <div class="date-box">
-                                <span class="month">OCT</span>
-                                <span class="day">15</span>
-                            </div>
-                            <div class="assignment-info">
-                                <h4>English Essay Draft</h4>
-                                <p>Due in 5 days</p>
-                            </div>
-                            <span class="status-tag medium">Med</span>
-                        </div>
-
-                        <div class="assignment-item disabled">
-                            <div class="date-box">
-                                <span class="month">SEP</span>
-                                <span class="day">30</span>
-                            </div>
-                            <div class="assignment-info">
-                                <h4>Algebra Quiz</h4>
-                                <p>Expired / Submitted</p>
-                            </div>
-                            <span class="status-tag done">Done</span>
-                        </div>
-                    </div>
-                </section>
-
             </div>
-        </main>
-    </div>
+        </section>
+
+        <!-- NEWS SECTION -->
+        <section id="newsSection" class="section news">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Latest Announcements</h2>
+                    <a href="#" class="view-all">View All News</a>
+                </div>
+                <div class="grid grid-3" id="newsGrid">
+                    <article class="card news-card">
+                        <div class="news-date">Oct 12, 2025</div>
+                        <h3>2026 Admissions Now Open</h3>
+                        <p>Early bird applications for the next academic session are now being accepted.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </article>
+                    <article class="card news-card">
+                        <div class="news-date">Oct 05, 2025</div>
+                        <h3>Science Fair Winners</h3>
+                        <p>Congratulations to the Grade 11 team for winning the Regional STEM Challenge.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </article>
+                    <article class="card news-card">
+                        <div class="news-date">Sep 28, 2025</div>
+                        <h3>New Campus Library</h3>
+                        <p>The digital-first library wing is officially open to all registered students.</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIALS SECTION -->
+        <section id="testimonialsSection" class="section testimonials">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Success Stories</h2>
+                </div>
+                <div class="testimonial-slider" id="testimonialContainer">
+                    <article class="testimonial-item">
+                        <p class="quote">"EduStream provided me with the tools and the confidence to pursue my dreams in Aerospace Engineering."</p>
+                        <footer class="author">— Sarah Jenkins, Class of '22</footer>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footerSection" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <div class="logo-group">
+                        <div class="logo-box">E</div>
+                        <span>EduStream</span>
+                    </div>
+                    <p>Excellence in education, innovation in learning.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="EduStream Login Page/auth.html">Portal Login</a></li>
+                        <li><a href="#">Apply Online</a></li>
+                        <li><a href="#">Alumni</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>📍 123 Education Way, Academic City</p>
+                    <p>📞 +1 (555) 000-1234</p>
+                    <p>✉️ hello@edustream.edu</p>
+                </div>
+                <div class="footer-social" id="socialLinks">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" id="fbLink">FB</a>
+                        <a href="#" class="social-icon" id="twLink">TW</a>
+                        <a href="#" class="social-icon" id="igLink">IG</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EduStream Public School. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
