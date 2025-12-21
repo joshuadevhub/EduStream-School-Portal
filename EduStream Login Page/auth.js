@@ -12,6 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (userNameValue === "John Smith" && passwordValue === "password123") {
       window.location.href =
         "../EduStream Student Dashboard Page/dashboard.html";
+    } else if (userNameValue === "Admin" && passwordValue === "password123") {
+      window.location.href = "../EduStream Admin Dashboard Page/admin.html";
     } else {
       alert(`${userNameValue} does not exist in our database!`);
     }

@@ -1,128 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EduStream | Portal Login</title>
-    <link rel="stylesheet" href="auth.css">
+    <link rel="stylesheet" href="auth.css" />
     <script src="auth.js" defer></script>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="auth-page">
-        <!-- Radio Logic for Switching Tabs -->
-        <input type="radio" name="auth-toggle" id="login-tab" checked hidden>
-        <input type="radio" name="auth-toggle" id="signup-tab" hidden>
+      <!-- Radio Logic for Switching Tabs -->
+      <input type="radio" name="auth-toggle" id="login-tab" checked hidden />
+      <input type="radio" name="auth-toggle" id="signup-tab" hidden />
 
-        <div class="auth-container">
-            <!-- Left Side: Branding/Visual -->
-            <div class="auth-visual">
-                <div class="visual-content">
-                    <div class="logo">
-                        <div class="logo-icon">E</div>
-                        <span>EduStream</span>
-                    </div>
-                    <h1>Empowering the next generation of scholars.</h1>
-                    <p>Access your courses, grades, and schedules in one unified workspace.</p>
-                </div>
-                <div class="visual-footer">
-                    <p>© 2025 EduStream Education Systems</p>
-                </div>
+      <div class="auth-container">
+        <!-- Left Side: Branding/Visual -->
+        <div class="auth-visual">
+          <div class="visual-content">
+            <div class="logo">
+              <div class="logo-icon">E</div>
+              <span>EduStream</span>
             </div>
-
-            <!-- Right Side: Forms -->
-            <div class="auth-form-side">
-                <div class="form-card">
-                    
-                    <!-- Tab Switcher -->
-                    <div class="tab-controls">
-                        <label for="login-tab" class="tab-label">Login</label>
-                        <label for="signup-tab" class="tab-label">Sign Up</label>
-                        <div class="tab-indicator"></div>
-                    </div>
-
-                    <!-- LOGIN FORM -->
-                    <form class="auth-form login-form" id="login-form">
-                        <header>
-                            <h2>Welcome Back</h2>
-                            <p>Enter your credentials to access your portal</p>
-                        </header>
-
-                        <div class="input-group">
-                            <label for="login-email">Username</label>
-                            <input type="text" id="login-username" placeholder="John Doe">
-                        </div>
-
-                        <div class="input-group">
-                            <div class="label-row">
-                                <label for="login-pass">Password</label>
-                                <a href="#" class="forgot-link">Forgot?</a>
-                            </div>
-                            <input type="password" id="login-pass" placeholder="••••••••">
-                        </div>
-
-                        <label class="checkbox-container">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            Remember this device
-                        </label>
-
-                        <button type="submit" class="btn-submit">Sign In</button>
-
-                        <div class="divider"><span>Or continue with</span></div>
-
-                        <div class="social-grid">
-                            <button type="button" class="btn-social">Google</button>
-                            <button type="button" class="btn-social">Microsoft</button>
-                        </div>
-                    </form>
-
-                    <!-- SIGN UP FORM -->
-                    <form action="#" class="auth-form signup-form">
-                        <header>
-                            <h2>Create Account</h2>
-                            <p>Register using your official student ID</p>
-                        </header>
-
-                        <div class="input-row">
-                            <div class="input-group">
-                                <label for="fname">First Name</label>
-                                <input type="text" id="fname" placeholder="John" required>
-                            </div>
-                            <div class="input-group">
-                                <label for="lname">Last Name</label>
-                                <input type="text" id="lname" placeholder="Smith" required>
-                            </div>
-                        </div>
-
-                        <div class="input-group">
-                            <label for="student-id">Student ID</label>
-                            <input type="text" id="student-id" placeholder="2025-XXXX" required>
-                        </div>
-
-                        <div class="input-group">
-                            <label for="sign-email">Email Address</label>
-                            <input type="email" id="sign-email" placeholder="jsmith@school.edu" required>
-                        </div>
-
-                        <div class="input-group">
-                            <label for="sign-pass">Create Password</label>
-                            <input type="password" id="sign-pass" placeholder="Minimum 8 characters" required>
-                        </div>
-
-                        <label class="checkbox-container">
-                            <input type="checkbox" required>
-                            <span class="checkmark"></span>
-                            I agree to the <a href="#">Terms & Conditions</a>
-                        </label>
-
-                        <button type="submit" class="btn-submit">Register Portal</button>
-                    </form>
-
-                </div>
-            </div>
+            <h1>Empowering the next generation of scholars.</h1>
+            <p>
+              Access your courses, grades, and schedules in one unified
+              workspace.
+            </p>
+          </div>
+          <div class="visual-footer">
+            <p>© 2025 EduStream Education Systems</p>
+          </div>
         </div>
-    </div>
 
-</body>
+        <!-- Right Side: Forms -->
+        <div class="auth-form-side">
+          <div class="form-card">
+            <!-- Tab Switcher -->
+            <div class="tab-controls">
+              <label for="login-tab" class="tab-label">Login</label>
+              <label for="signup-tab" class="tab-label">Sign Up</label>
+              <div class="tab-indicator"></div>
+            </div>
+
+            <!-- LOGIN FORM -->
+            <form class="auth-form login-form" id="login-form">
+              <header>
+                <h2>Welcome Back</h2>
+                <p>Enter your credentials to access your portal</p>
+              </header>
+
+              <div class="input-group">
+                <label for="login-email">Username</label>
+                <input type="text" id="login-username" placeholder="John Doe" />
+              </div>
+
+              <div class="input-group">
+                <div class="label-row">
+                  <label for="login-pass">Password</label>
+                  <a href="#" class="forgot-link">Forgot?</a>
+                </div>
+                <input type="password" id="login-pass" placeholder="••••••••" />
+              </div>
+
+              <label class="checkbox-container">
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+                Remember this device
+              </label>
+
+              <button type="submit" class="btn-submit">Sign In</button>
+
+              <div class="divider"><span>Or continue with</span></div>
+
+              <div class="social-grid">
+                <button type="button" class="btn-social">Google</button>
+                <button type="button" class="btn-social">Microsoft</button>
+              </div>
+            </form>
+
+            <!-- SIGN UP FORM -->
+            <form action="#" class="auth-form signup-form">
+              <header>
+                <h2>Create Account</h2>
+                <p>Register using your official student ID</p>
+              </header>
+
+              <div class="input-row">
+                <div class="input-group">
+                  <label for="fname">First Name</label>
+                  <input type="text" id="fname" placeholder="John" required />
+                </div>
+                <div class="input-group">
+                  <label for="lname">Last Name</label>
+                  <input type="text" id="lname" placeholder="Smith" required />
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label for="student-id">Student ID</label>
+                <input
+                  type="text"
+                  id="student-id"
+                  placeholder="2025-XXXX"
+                  required
+                />
+              </div>
+
+              <div class="input-group">
+                <label for="sign-email">Email Address</label>
+                <input
+                  type="email"
+                  id="sign-email"
+                  placeholder="jsmith@school.edu"
+                  required
+                />
+              </div>
+
+              <div class="input-group">
+                <label for="sign-pass">Create Password</label>
+                <input
+                  type="password"
+                  id="sign-pass"
+                  placeholder="Minimum 8 characters"
+                  required
+                />
+              </div>
+
+              <label class="checkbox-container">
+                <input type="checkbox" required />
+                <span class="checkmark"></span>
+                I agree to the <a href="#">Terms & Conditions</a>
+              </label>
+
+              <button type="submit" class="btn-submit">Register Portal</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

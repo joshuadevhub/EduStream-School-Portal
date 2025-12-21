@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduStream Admin | School Management</title>
+    <link rel="stylesheet" href="admin.css" />
+    <script src="admin.js" defer></script>
+  </head>
+  <body>
+    <!-- Sidebar Toggle Logic (CSS Only) -->
+    <input type="checkbox" id="sidebarToggle" class="sidebar-checkbox" hidden />
+
+    <div class="admin-layout">
+      <!-- SIDEBAR NAVIGATION -->
+      <aside id="adminSidebar" class="sidebar">
+        <div class="sidebar-header">
+          <div class="logo">
+            <div class="logo-icon">E</div>
+            <span>EduStream Admin</span>
+          </div>
+          <label for="sidebarToggle" class="close-sidebar-btn">×</label>
+        </div>
+
+        <nav class="sidebar-nav">
+          <ul id="mainNav">
+            <li class="nav-item active" id="navItemDashboard">
+              <a href="#"><span class="icon">📊</span> Dashboard Overview</a>
+            </li>
+            <li class="nav-item" id="navItemStudents">
+              <a href="#"><span class="icon">🎓</span> Students Management</a>
+            </li>
+            <li class="nav-item" id="navItemTeachers">
+              <a href="#"><span class="icon">👨‍🏫</span> Teachers Management</a>
+            </li>
+            <li class="nav-item" id="navItemClasses">
+              <a href="#"><span class="icon">🏫</span> Classes & Subjects</a>
+            </li>
+            <li class="nav-item" id="navItemResults">
+              <a href="#"><span class="icon">📝</span> Results & Records</a>
+            </li>
+            <li class="nav-item" id="navItemFees">
+              <a href="#"><span class="icon">💳</span> Fees & Payments</a>
+            </li>
+            <li class="nav-item" id="navItemAnnouncements">
+              <a href="#"><span class="icon">📢</span> Announcements</a>
+            </li>
+            <li class="nav-item" id="navItemSettings">
+              <a href="#"><span class="icon">⚙️</span> System Settings</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+          <a href="../index.html" class="logout-link" id="btnLogout">
+            <span class="icon">🚪</span> Logout
+          </a>
+        </div>
+      </aside>
+
+      <!-- MAIN WRAPPER -->
+      <div class="main-wrapper">
+        <!-- TOP NAVIGATION BAR -->
+        <header id="adminTopbar" class="topbar">
+          <div class="topbar-left">
+            <label for="sidebarToggle" class="menu-hamburger" id="hamburgerBtn"
+              >☰</label
+            >
+            <div class="search-box">
+              <input
+                type="text"
+                id="globalSearchInput"
+                placeholder="Search students, records, IDs..."
+              />
+            </div>
+          </div>
+
+          <div class="topbar-right">
+            <button class="icon-btn" id="notifBtn" aria-label="Notifications">
+              🔔 <span class="notif-badge" id="notifCount">4</span>
+            </button>
+            <div class="admin-profile" id="adminProfileTrigger">
+              <div class="admin-avatar" id="adminAvatar">AD</div>
+              <div class="admin-info desktop-only">
+                <span class="admin-name" id="adminName">Admin User</span>
+                <span class="admin-role">Super Admin</span>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <!-- DASHBOARD CONTENT -->
+        <main id="dashboardView" class="dashboard-body">
+          <!-- QUICK ACTIONS -->
+          <section id="quickActions" class="quick-actions">
+            <button class="btn btn-primary" id="btnQuickAddStudent">
+              + Add Student
+            </button>
+            <button class="btn btn-outline" id="btnQuickAddTeacher">
+              + Add Teacher
+            </button>
+            <button class="btn btn-outline" id="btnPublishResult">
+              📢 Publish Result
+            </button>
+          </section>
+
+          <!-- STATS SECTION -->
+          <section id="statsSection" class="stats-grid">
+            <div class="stat-card" id="statStudents">
+              <div class="stat-content">
+                <p class="stat-label">Total Students</p>
+                <h3 class="stat-value" id="countTotalStudents">1,284</h3>
+                <span class="stat-trend positive">↑ 12% this month</span>
+              </div>
+              <div class="stat-visual">👥</div>
+            </div>
+            <div class="stat-card" id="statTeachers">
+              <div class="stat-content">
+                <p class="stat-label">Total Teachers</p>
+                <h3 class="stat-value" id="countTotalTeachers">86</h3>
+                <span class="stat-trend">Full Staff</span>
+              </div>
+              <div class="stat-visual">👩‍🏫</div>
+            </div>
+            <div class="stat-card" id="statClasses">
+              <div class="stat-content">
+                <p class="stat-label">Total Classes</p>
+                <h3 class="stat-value" id="countTotalClasses">42</h3>
+                <span class="stat-trend">Across 6 levels</span>
+              </div>
+              <div class="stat-visual">🏫</div>
+            </div>
+            <div class="stat-card urgent" id="statApprovals">
+              <div class="stat-content">
+                <p class="stat-label">Pending Approvals</p>
+                <h3 class="stat-value" id="countPendingApprovals">18</h3>
+                <span class="stat-trend negative">Requires attention</span>
+              </div>
+              <div class="stat-visual">⚠️</div>
+            </div>
+          </section>
+
+          <!-- DATA GRID -->
+          <div class="dashboard-main-grid">
+            <!-- DATA TABLE PREVIEW -->
+            <section id="dataPreview" class="content-card">
+              <div class="card-header">
+                <h3>Recent Student Enrollments</h3>
+                <button class="text-btn" id="btnViewAllStudents">
+                  View All
+                </button>
+              </div>
+              <div class="table-responsive">
+                <table id="recentStudentsTable">
+                  <thead>
+                    <tr>
+                      <th>Student ID</th>
+                      <th>Name</th>
+                      <th>Class</th>
+                      <th>Status</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>#EDU-2025-001</td>
+                      <td>Alice Johnson</td>
+                      <td>JS 3A</td>
+                      <td><span class="badge badge-success">Active</span></td>
+                      <td>
+                        <button class="btn-sm" id="edit-001">Edit</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>#EDU-2025-002</td>
+                      <td>Bob Miller</td>
+                      <td>SS 1B</td>
+                      <td><span class="badge badge-warning">Pending</span></td>
+                      <td>
+                        <button class="btn-sm" id="edit-002">Edit</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>#EDU-2025-003</td>
+                      <td>Charlie Davis</td>
+                      <td>JS 1C</td>
+                      <td><span class="badge badge-success">Active</span></td>
+                      <td>
+                        <button class="btn-sm" id="edit-003">Edit</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <!-- RECENT ACTIVITY -->
+            <section id="recentActivity" class="content-card">
+              <div class="card-header">
+                <h3>System Activity</h3>
+              </div>
+              <div class="activity-timeline" id="activityFeed">
+                <div class="activity-item">
+                  <div class="activity-icon icon-success">✅</div>
+                  <div class="activity-text">
+                    <p><strong>Result Published</strong>: Grade 12 Physics</p>
+                    <span>2 hours ago</span>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-icon icon-info">ℹ️</div>
+                  <div class="activity-text">
+                    <p><strong>Fee Updated</strong>: Term 2 Bus Services</p>
+                    <span>5 hours ago</span>
+                  </div>
+                </div>
+                <div class="activity-item">
+                  <div class="activity-icon icon-warning">⚠️</div>
+                  <div class="activity-text">
+                    <p>
+                      <strong>Login Attempt</strong>: Failed login from IP
+                      192.168.1.1
+                    </p>
+                    <span>Yesterday</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+
+        <footer id="adminFooter" class="footer">
+          <p>&copy; 2025 EduStream Management System • v2.0.4-stable</p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
