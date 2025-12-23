@@ -177,6 +177,7 @@ body {
 /* --- Testimonials --- */
 .testimonials { background: var(--primary); color: white; text-align: center; }
 .testimonials h2 { color: white; }
+.testimonial-item{ transition: opacity 0.5s ease; }
 .testimonial-item .quote { font-size: 1.5rem; font-style: italic; margin-bottom: 1rem; }
 .testimonial-item .author { font-weight: 600; opacity: 0.8; }
 

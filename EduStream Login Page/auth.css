@@ -181,6 +181,18 @@ input[type="password"] {
     outline: none;
     transition: var(--transition);
 }
+.input-group.success input{
+    border: 1px solid #16a34a;
+}
+.input-group.error input{
+    border: 1px solid #dc2626;
+}
+.error-message{
+    color: #dc2626;
+    font-size: 12px;
+    margin-left: 0.4rem;
+    /* display: none; */
+}
 
 input:focus {
     border-color: var(--primary);
